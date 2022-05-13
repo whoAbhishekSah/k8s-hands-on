@@ -1,0 +1,14 @@
+#PersistentVolumeClaim that requests a volume of at least 
+#three gibibytes that can provide read-write access for at least one Node
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: task-pv-claim
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
+
